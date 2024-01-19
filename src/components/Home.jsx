@@ -80,11 +80,13 @@ const AlbumCard = ({ album }) => {
 
 const AlbumList = ({ albums }) => {
   return (
-    <Row>
-      {albums.map((album) => (
-        <AlbumCard key={album.id} album={album} />
-      ))}
-    </Row>
+    <div>
+      <Row>
+        {albums.map((album) => (
+          <AlbumCard key={album.id} album={album} />
+        ))}
+      </Row>
+    </div>
   );
 };
 const Home = ({ artist }) => {
