@@ -68,11 +68,10 @@ const AlbumCard = ({ album }) => {
   return (
     <Col xs={12} sm={6} md={4} lg={3} className="mb-4">
       <Card>
-        <Card.Img variant="top" src={album.cover_medium} />
+        <Card.Img variant="top" src={album.album.cover_medium} />
         <Card.Body>
           <Card.Title>{album.title}</Card.Title>
           <Card.Text>Artist: {album.artist.name}</Card.Text>
-          {/* Altri dettagli dell'album che desideri mostrare */}
         </Card.Body>
       </Card>
     </Col>
@@ -88,7 +87,6 @@ const AlbumList = ({ albums }) => {
     </Row>
   );
 };
-
 const Home = ({ artist }) => {
   const [albums, setAlbums] = useState([]);
 
